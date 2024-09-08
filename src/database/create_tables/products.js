@@ -4,8 +4,8 @@ CREATE TABLE IF NOT EXISTS products (
     , name VARCHAR NOT NULL
     , price DECIMAL(8,2) NOT NULL
     , stock INTEGER
-    , sold INTEGER 
-    , subcategory_id INTEGER REFERENCES category(id) ON DELETE CASCADE ON UPDATE CASCADE
+    , sold INTEGER DEFAULT 0
+    , subcategory_id INTEGER REFERENCES subcategory(id) ON DELETE CASCADE ON UPDATE CASCADE
     , created_at DATETIME DEFAULT CURRENT_TIMESTAMP
     , updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );

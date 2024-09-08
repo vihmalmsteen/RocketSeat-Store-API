@@ -1,11 +1,6 @@
 require('express-async-errors')
 const express = require('express')
-const {sqliteConn} = require('./database/DBconnection')
 const {routes} = require('./routes/assembler')
-const {errorHandler} = require('./utils/errorHandler')
-
-
-sqliteConn()
 
 const port = 3000
 
@@ -13,8 +8,16 @@ const app = express().use(express.json())
 app.use(routes)
 
 app.get('/', (req, res) => {
-    res.send(`Welcome to store API!<br>
-              More routes on the way!`)
+    res.send(`<h4>Welcome to store API!</h4>
+              Routes:<br>
+              /users<br>
+              /category<br>
+              /subcategory<br>
+              /products<br>
+              /checkouts<br>
+              /checkout_items<br><br>
+              All with CRUD statements.
+              `)
 })
 
 app.listen(port, () => {
