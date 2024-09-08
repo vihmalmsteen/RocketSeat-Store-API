@@ -82,6 +82,6 @@ A estrutura dos arquivos:
 
 1. `server.js`: Arquivo principal, inicia o servidor e tudo desemboca aqui.
 2. `database`: Pasta com o arquivo do database, JS de criação de cada tabela e script de conexão com banco mysqlite.
-3. `controllers`: Pasta contendo o script de CRUD de cada tabela. Cada CRUP é um método de uma classe.
+3. `controllers`: Pasta contendo o script de CRUD de cada tabela. Cada CRUD é um método de uma classe.
 4. `routes`: Pasta contendo o script de cada rota para cada comando CRUD de cada tabela. Além de um arquivo que consolida todas as rotas em uma única rota, que é exportada e enviada para o arquivo do servidor.
 5. `utils`: Contém o arquivo com a classe de erro personalizada para tratamento de erros.
